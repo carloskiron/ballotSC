@@ -10,6 +10,7 @@
   "include": [
     "./scripts",
     "./test",
+    "./util",
     "./typechain",
     "./typechain-types"
   ],
