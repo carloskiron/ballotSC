@@ -1,7 +1,9 @@
 
 import { ethers } from "ethers";
 import { Ballot } from "../typechain-types";
-import { ADDRESS_TO_GIVE_RIGHTS, Ballot_Json, CONTRACT_ADDRESS } from "./util/scriptUtils";
+import { Ballot_Json, CONTRACT_ADDRESS } from "./util/scriptUtils";
+
+const ADDRESS_TO_GIVE_RIGHTS = ""; // address to give right to vote
 
 async function main() {
   
@@ -19,8 +21,6 @@ async function main() {
   if (balance < 0.01) throw new Error("Not enough ether");
   
   const ballotContract = new ethers.Contract(CONTRACT_ADDRESS, Ballot_Json.abi, signer) as Ballot;
-  console.log({ballotContract});
-
   console.log("Giving right to vote to: ", ADDRESS_TO_GIVE_RIGHTS);
   let voterForAccount = await ballotContract.voters(ADDRESS_TO_GIVE_RIGHTS);
   console.log({ voterForAccount });

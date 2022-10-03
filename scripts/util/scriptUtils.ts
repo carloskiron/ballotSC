@@ -9,8 +9,6 @@ function convertStringArrayToBytes32(array: string[]) {
 }
 
 const CONTRACT_ADDRESS = "0x659A4758A7398a1E7C2e764381888c844002AF9a";
-const ADDRESS_TO_GIVE_RIGHTS = ""; // address to give right to vote
-
 const Ballot_JSON = {
   "_format": "hh-sol-artifact-1",
   "contractName": "Ballot",
@@ -170,4 +168,4 @@ const Ballot_JSON = {
   "deployedLinkReferences": {}
 };
 
-export { convertStringArrayToBytes32, Ballot_JSON as Ballot_Json, CONTRACT_ADDRESS, ADDRESS_TO_GIVE_RIGHTS };  
+export { convertStringArrayToBytes32, Ballot_JSON as Ballot_Json, CONTRACT_ADDRESS };  
